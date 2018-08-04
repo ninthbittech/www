@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Sabre - Change Logs</title>
+
+    <link href="../../css/themes/flatly/bootstrap.min.css" rel="stylesheet">
+    <!-- <link href="css/bootstrap.min.css" rel="stylesheet"> -->
+
+    <!-- <link href="css/freelancer.css" rel="stylesheet"> -->
+    <link href="../../font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+		<link href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet" type="text/css">
+    
+		<link href="../../css/style.css" rel="stylesheet">
+		
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body id="page-top" class="index">
+
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="../../">Ninth Bit</a>
+            </div>
+
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="hidden">
+                        <a href="../../"></a>
+                    </li>
+                    <li class="page-scroll">
+                        <a href="../../#products">Products</a>
+                    </li>
+                    <li class="page-scroll">
+                        <a href="../../#about">About</a>
+                    </li>
+                    <li class="page-scroll">
+                        <a href="../../#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+		
+    <section id="content">
+			<div class="container">
+				<div class="col-md-3">
+					<ul class="nav nav-pills nav-stacked">
+						<li role="presentation"><a href="features.html">Features</a></li>
+						<li role="presentation"><a href="../../products/sabre/javadocs/" target="_blank">Java Docs</a></li>
+						<li role="presentation"><a href="examples.html">Examples</a></li>
+						<li role="presentation"><a href="downloads.html">Downloads</a></li>
+						<li role="presentation"><a href="licenses.html">Licenses</a></li>
+						<li role="presentation" class="active"><a href="change-logs.html">Change Logs</a></li>
+					</ul>
+				</div>
+				<div class="col-md-9 change-log">
+					<div>
+						<h4>Version 3.1.5 (Current)</h4>
+						<ul>
+							<li>Added support to get thread pool stats via bean shell. New bsh command tpStats added</li>
+							<li>Added support to get database query performance stats via bean shell. New bsh command dbStats added</li>
+							<li>Added support to get http server stats via bean shell. New bsh command httpStats added</li>
+							<li>BETA Internal system health stats monitor (unstable)</li>
+						</ul>
+					</div>
+					
+					<div>
+						<h4>Version 3.0.6</h4>
+						<ul>
+							<li>Major revamp in internal coupling model to enable internal stats collection</li>
+							<li>Opertational Measurement (OM) framework package added to create, record and log OMs</li>
+							<li>Created CounterOM to log counter events and related statistics with facility to increment, decrement</li>
+							<li>Created NumericOM to log numeric values like min, max, avg, total, history etc</li>
+							<li>Each Rule now records and prints the time taken to execute</li>
+							<li>BETA The workflow controller now records and prints the time taken to execute a complete flow</li>
+							<li>BETA Beanshell based live stats monitor for system threads (unstable)</li>
+						</ul>
+					</div>
+					
+					<div>
+						<h4>Version 2.7.5</h4>
+						<ul>
+							<li>Disabled ServerHeader for Http Server (Security fix)</li>
+						</ul>
+					</div>
+					
+					<div>
+						<h4>Version 2.7.4</h4>
+						<ul>
+							<li>Improved performance of Rule and Workflow processing</li>
+							<li>Processors now have separate thread pools and processing queues with configurable sizes</li>
+							<li>BETA Operational Measurement (OM) support (unstable)</li>
+						</ul>
+					</div>
+					
+					<div>
+						<h4>Version 2.7.3</h4>
+						<ul>
+							<li>Minor bug fixes and logging changes from previous version</li>
+						</ul>
+					</div>
+					
+					<div>
+						<h4>Version 2.7.2</h4>
+						<ul>
+							<li>Pooled database connections can be closed, no need to release</li>
+							<li>Database connection manager can now have configurable init scripts</li>
+							<li>Custom pre-launch configuration capability added before processors start</li>
+							<li>Updated dependency libraries to latest versions</li>
+						</ul>
+					</div>
+					
+					<div>
+						<h4>Version 2.6.9</h4>
+						<ul>
+							<li>Added Database appender for logging to Database.</li>
+							<li>Prepared Statements are no longer pooled for temporary connections</li>
+						</ul>
+					</div>
+					
+					<div>
+						<h4>Version 2.6.1</h4>
+						<ul>
+							<li>Possible looping condition in TCP IP Connection close resolved</li>
+							<li>TCP Connection initialization sequence made robust</li>
+							<li>Possible race condition in TCP Connection initialization resolved</li>
+						</ul>
+					</div>
+					
+					<div>
+						<h4>Version 2.6.0</h4>
+						<ul>
+							<li>Major improvement in logging performance.</li>
+							<li>Logging now follows the Simple Logging Facade for JAVA</li>
+							<li>Base logger is now Logback</li>
+							<li>Database Connection performance improved in case of pool
+								crossing limits</li>
+							<li>Transient Database connections initialization overhead
+								removed</li>
+							<li>Dead prepared statements are now automatically revived</li>
+							<li>Custom dev : Callable statements can now be pooled like
+								prepared statements</li>
+						</ul>
+					</div>
+					<div>
+						<h4>Version 2.5.2</h4>
+						<ul>
+							<li>Made contexts more configurable</li>
+							<li>Optimized context factory for performance</li>
+							<li>Logging initialization sequence changed for more clarity</li>
+						</ul>
+					</div>
+					<div>
+						<h4>Version 2.5.1</h4>
+						<ul>
+							<li>Configurable web service support added</li>
+							<li>Web service input processor added</li>
+							<li>TCP Connection manager threading model optimized and improved</li>
+						</ul>
+					</div>
+					<div>
+						<h4>Version 2.5.0</h4>
+						<ul>
+							<li>Internal update. New release 2.5.0</li>
+							<li>USB Key based licensing model introduced.</li>
+						</ul>
+					</div>
+					<div>
+						<h4>Version 2.4.7</h4>
+						<ul>
+							<li>Custom Patch : ISO8583 processors now also have sessionless
+								capability</li>
+							<li>Custom Patch : ISO8583 segmentation can now be done on basis
+								of 4 byte decimal length header</li>
+							<li>TCP Connection manager selection key threading issue resolved</li>
+							<li>Removed helper method to return socket from TCP Connection
+								manager.</li>
+							<li>Added new methods for providing TCP connection properties.</li>
+							<li>Stabilized the initialization of Database persisted Map.</li>
+							<li>Stabilized USB key based licensing.</li>
+						</ul>
+					</div>
+					<div>
+						<h4>Version 2.4.4 - 2.4.6</h4>
+						<ul>
+							<li>Internal releases and bugfixes</li>
+							<li>BETA USB Key based License management (unstable)</li>
+							<li>Fixed TCP reconnection issue - retrier will now not start in
+								server mode.</li>
+							<li>Added helper methods for giving access to TCP Socket</li>
+							<li>Cleaned up the TCP helper code to ensure inheritance
+								hierarchy</li>
+							<li>Fixed String Formatter issue to include length of skipped
+								bytes</li>
+							<li>Minor bugfixes</li>
+						</ul>
+					</div>
+					<div>
+						<h4>Version 2.4.3</h4>
+						<ul>
+							<li>Added Database persisted Map</li>
+							<li>Added auto table dump creators for persited map</li>
+							<li>Added Serialization capabilities for map persistence</li>
+							<li>Added bucketing algorithms for Rule Decision key switches</li>
+							<li>Added activation record capability for Flow Controller</li>
+						</ul>
+					</div>
+					<div>
+						<h4>Version 2.4.2</h4>
+						<ul>
+							<li>Added Statement creation and pooling capability to Database
+								Connection manager</li>
+							<li>BETA Rule and Rule Chain manipulation GUI released (unstable)</li>
+							<li>Automatic Rule implementation code generators created.</li>
+						</ul>
+					</div>
+					<div>
+						<h4>Version 2.4.1</h4>
+						<ul>
+							<li>Updated JAVA Comm Serial to RxTx</li>
+							<li>APIs for GUI based Rule Configurator developed</li>
+							<li>Interfaces created for GUI integration</li>
+							<li>TCP/IP Round Robin capability added for outbound data</li>
+						</ul>
+					</div>
+					<div>
+						<h4>Version 2.4.0</h4>
+						<ul>
+							<li>Internal update. New release 2.4.0</li>
+							<li>Made the ISO 8583 Segmenter configurable</li>
+							<li>Bugfix for ISO 8583 reconnect issue</li>
+							<li>Minor bugfixes</li>
+						</ul>
+					</div>
+					<div>
+						<h4>Version 2.3.9</h4>
+						<ul>
+							<li>Custom Dev : Added ISO 8583 protocol support</li>
+							<li>Session manager for ISO 8583 added</li>
+							<li>Added ISO 8583 templatizer</li>
+							<li>MTU resizing removed, bug fixed</li>
+							<li>TCP/IP perma connections implemented</li>
+							<li>TCP/IP retry algorithm revamped</li>
+						</ul>
+					</div>
+					<div>
+						<h4>Version 2.3.8</h4>
+						<ul>
+							<li>Enhanced TCP/IP Input processor with segmenter</li>
+							<li>Added NIO support for the TCP/IP processor</li>
+							<li>Asynchronous transaction mapping support added</li>
+							<li>MTU resizing capability added for TCP</li>
+						</ul>
+					</div>
+					<div>
+						<h4>Version 2.3.7</h4>
+						<ul>
+							<li>TCP/IP Connection Client created</li>
+							<li>Added connection limit for TCP/IP connections</li>
+							<li>Added auto retry for TCP/IP connections</li>
+							<li>Improved segmenter performance</li>
+						</ul>
+					</div>
+					<div>
+						<h4>Version 2.3.6</h4>
+						<ul>
+							<li>Added TCP/IP Input Processor</li>
+							<li>Added protocol segmenter based model.</li>
+							<li>Added default segmenters and IO Data processors</li>
+						</ul>
+					</div>
+					<div>
+						<h4>Version 2.3.4 - 2.3.5</h4>
+						<ul>
+							<li>Added Scheduler capability to timed task</li>
+							<li>Added Cron capability to timed task</li>
+							<li>Added Unbounded threadpool</li>
+							<li>Added Rejecting threadpool</li>
+							<li>Added Flow Controller synchronization capabilities</li>
+							<li>Added Access Controlled threadpool scheduling</li>
+						</ul>
+					</div>
+					<div>
+						<h4>Version 2.3.3</h4>
+						<ul>
+							<li>Added Re Entrant locking to the threading model</li>
+							<li>Added third party licensing capability</li>
+							<li>Added configurable String formatters and parsers</li>
+						</ul>
+					</div>
+					<div>
+						<h4>Version 2.3.2</h4>
+						<ul>
+							<li>Custom Dev : Added GSM Modem Processor</li>
+							<li>Added GSM Modem sender</li>
+							<li>Added serial communication capabilities</li>
+						</ul>
+					</div>
+					<div>
+						<h4>Version 2.3.1</h4>
+						<ul>
+							<li>Enhanced HTTP Input Processor to use NIO for aysnchronous
+								processing</li>
+							<li>Upgraded Jetty</li>
+							<li>Modified Processor initialization sequence for reducing
+								startup time</li>
+							<li>Added Copy On Write Context for better performance</li>
+						</ul>
+					</div>
+					<div>
+						<h4>Version 2.3.0</h4>
+						<ul>
+							<li>Internal update. New release 2.3.0</li>
+						</ul>
+					</div>
+					<div>
+						<h4>Version 2.2.9</h4>
+						<ul>
+							<li>Added file processing utilities</li>
+							<li>Added HTTP GET and POST request senders</li>
+							<li>ER Logger is now externally configurable</li>
+							<li>Database Connection Manager can now create new unpooled
+								Connections</li>
+						</ul>
+					</div>
+					<div>
+						<h4>Version 2.2.8</h4>
+						<ul>
+							<li>Removed possible memory leak in Context</li>
+							<li>Added facility for creating new Objects in the Object factory</li>
+							<li>Added capability for generating Event Records</li>
+							<li>Centralized Thread Pool added</li>
+						</ul>
+					</div>
+					<div>
+						<h4>Version 2.2.7</h4>
+						<ul>
+							<li>Added SSL support to HTTP Input Processor</li>
+							<li>Enhanced XML Decoder / Encoder - XML encoding / decoding is
+								now faster</li>
+							<li>HTTP Input Processor can accept multiple contexts on same
+								port</li>
+							<li>Added functionality for MQ Autoconnect</li>
+							<li>Added functionality for Database cleanup and reconnect</li>
+							<li>Added functionality for Database Connection Object Factory</li>
+						</ul>
+					</div>
+					<div>
+						<h4>Version 2.2.2 - 2.2.6</h4>
+						<ul>
+							<li>Internal releases and bug-fixes</li>
+							<li>Added IBM MQ support</li>
+							<li>Enhanced OpenMQ support</li>
+							<li>Enhanced the Java Message Queue Model</li>
+							<li>Fixed timed startup bug in Timer Task</li>
+							<li>Increased key size support in Crypto Processors</li>
+							<li>Added Object Factory model</li>
+							<li>Added Object Factory for FlowContext</li>
+							<li>Memory footprint reduction</li>
+							<li>Added Output Processor model to Flow Controller</li>
+							<li>Added Context Destroyer output processor</li>
+							<li>Added default return from rules</li>
+							<li>Added default end rule</li>
+							<li>Transition completed to JAVA 6.0</li>
+						</ul>
+					</div>
+					<div>
+						<h4>Version 2.2.1</h4>
+						<ul>
+							<li>Emergency bug fix for Database Connection heartbeat</li>
+							<li>Added connection pooling in Database Connection</li>
+							<li>Added Prepared Statement pooling in Database Connection</li>
+							<li>Added Context Persister</li>
+							<li>Added Context injection capabilities</li>
+							<li>Added Thread Death resistance</li>
+							<li>AAdded Byte Array Buffer utilities</li>
+							<li>Added Object Factory for FlowContext</li>
+							<li>Added Hexadecimal and Byte manipulation utils</li>
+						</ul>
+					</div>
+					<div>
+						<h4>Version 2.2.0</h4>
+						<ul>
+							<li>Code freeze after major changes. New Release 2.2.0</li>
+						</ul>
+					</div>
+					<div>
+						<h4>Version 2.1.1 - 2.1.9</h4>
+						<ul>
+							<li>Internal releases and bug-fixes</li>
+							<li>Redesign of Database Connection Manager</li>
+							<li>Added HTTP Input Processor support</li>
+							<li>Added Cryptography helpers</li>
+							<li>Added Crypto Processors</li>
+							<li>Added Timer Task</li>
+							<li>Added Timed Map and Map Timeout Task</li>
+							<li>Made Rule Decision Keys customizable externally</li>
+							<li>Added Java Mail support</li>
+							<li>Added Cloneable Rule model</li>
+							<li>Enhanced the Flow Controller for fast switching</li>
+							<li>Added bounded thread pool support</li>
+							<li>Threading model modified to reduce CPU utilization</li>
+							<li>Added configurable logging framework</li>
+							<li>Added Null processors</li>
+							<li>Rolled back to JAVA 5.0 - JAVA 6.0 stability issues</li>
+						</ul>
+					</div>
+					<div>
+						<h4>Version 2.1.0</h4>
+						<ul>
+							<li>Revamp of Rule model - added Singleton model</li>
+							<li>Revamp of Rule Chains</li>
+							<li>Revamp of Context based architecture</li>
+							<li>Removed internal thread based model</li>
+							<li>Revamp of internal locking model</li>
+							<li>Removed Context Suspender</li>
+							<li>Overall cleanup of legacy code</li>
+							<li>Started transition from JAVA 5.0 to JAVA 6.0</li>
+						</ul>
+					</div>
+					<div>
+						<h4>Version 2.2.0</h4>
+						<ul>
+							<li>Codebase port from legacy SABRE</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+    </section>
+
+    <footer class="text-center">
+        <div class="footer-above">
+            <div class="container">
+                <div class="row">
+                    <div class="footer-col col-md-4">
+                        <h3>Location</h3>
+                        <p>12, Sun View A,<br>Sukhwani Complex,<br>Pimpri, Pune,<br>India 411 018</p>
+                    </div>
+                    <div class="footer-col col-md-4">
+                        <h3>Around the Web</h3>
+                        <ul class="list-inline">
+                            <li>
+                                <a href="#" class="btn-social btn-outline"><i class="fa fa-fw fa-facebook"></i></a>
+                            </li>
+                            <li>
+                                <a href="#" class="btn-social btn-outline"><i class="fa fa-fw fa-twitter"></i></a>
+                            </li>
+                            <li>
+                                <a href="#" class="btn-social btn-outline"><i class="fa fa-fw fa-linkedin"></i></a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="footer-col col-md-4">
+                        <h3>About Ninth Bit</h3>
+                        <p class="short-detail">Ninth Bit Technologies is a product development company with focused expertise in the mobile telecom, finance and transaction processing domain.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-below">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        Copyright &copy; Ninth Bit 2015
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <div class="scroll-top page-scroll visible-xs visible-sm">
+        <a class="btn btn-primary" href="#page-top">
+            <i class="fa fa-chevron-up"></i>
+        </a>
+    </div>
+
+    <script src="../../js/jquery.js"></script>
+    <script src="../../js/bootstrap.min.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+    <script src="../../js/classie.js"></script>
+    <script src="../../js/cbpAnimatedHeader.js"></script>
+    <script src="../../js/jqBootstrapValidation.js"></script>
+    <script src="../../js/contact_me.js"></script>
+    <script src="../../js/freelancer.js"></script>
+</body>
+
+</html>
